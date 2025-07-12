@@ -1,4 +1,4 @@
-let menuIcon = document.querySelector('#menu-icon');
+let menuBtn = document.querySelector('#menuBtn');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -18,7 +18,28 @@ window.onscroll = () => {
     })
 }
 
-menuIcon.onclick = () =>{
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList,toggle('active');
-}
+menuBtn.onclick = () => {
+    navbar.classList.toggle('active');
+};
+
+// circle skill/////////////////////////////////////////////
+const circle = document.querySelectorAll('.circle');
+circle.forEach(elem => {
+    var dots = elem.getAttribute("data-dots");
+    var marked = elem.getAttribute("data-percent");
+    var percent = Math.floor(dots * marked / 100);
+    var points = "";
+    var rotate = 360 / dots;
+
+    // Create the points dynamically
+    for (let i = 0; i < dots; i++) {
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+    }
+    elem.innerHTML = points;
+
+    const pointsMarked = elem.querySelectorAll('.points');
+    for (let i = 0; i < percent; i++) {
+        pointsMarked[i].classList.add('marked'); // Mark points as per the percentage
+    }
+});
+
