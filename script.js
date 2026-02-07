@@ -59,3 +59,12 @@ function opentab(tabname, element) {
   element.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
 }
+
+function downloadFile() {
+  const link = document.createElement("a");
+  link.href = "cv.pdf"; // file in same folder
+  link.download = "Soumyadeep_CV.pdf"; // downloaded file name
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
