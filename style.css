@@ -47,7 +47,7 @@ body {
     z-index: 5;
 }
 
-.header #menuBtn{
+.header #menuBtn {
     font-size: 30px;
     color: var(--main-color);
     background-color: transparent;
@@ -311,27 +311,27 @@ span {
 
     0%,
     20% {
-        content: "Coder";
+        content: "Persuing BCA";
     }
 
     21%,
     40% {
-        content: "Frontend Designer";
+        content: "Backend Developer";
     }
 
     41%,
     60% {
-        content: "Web Developer";
+        content: "MongoDB Expert";
     }
 
     61%,
     80% {
-        content: "Python Programmer";
+        content: "Frontend Developer";
     }
 
     81%,
     100% {
-        content: "C Programmer";
+        content: "Web Developer";
     }
 }
 
@@ -552,8 +552,112 @@ span {
     margin: auto;
 }
 
-.contact {
+.skills {
     background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+
+.skills h1 {
+    font-size: 5rem;
+}
+
+.skills p {
+    margin-top: 15px;
+    font-size: 1.6rem;
+}
+
+.skills .skill-content {
+    max-width: 686px;
+}
+
+.skills .tab-titles {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.skills .tab-titles .tab-links {
+    /* margin-right: 50px; */
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    color: var(--main-color);
+}
+
+.skills .tab-titles .tab-links::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s ease-in-out;
+}
+
+.skills .tab-titles .tab-links.active-link::after {
+    width: 60%;
+    background-color: var(--main-shadow-color);
+}
+
+.skills .tab-contents {
+    margin-top: 3rem;
+    height: 100px;
+}
+
+.skills .tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.skills .tab-contents ul li span {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.skills .tab-contents {
+    display: none;
+}
+
+.skills .tab-contents.active-tab {
+    display: block;
+}
+
+.skills .image {
+    position: relative;
+    height: 500px;
+    width: 1100px;
+    background-color: rgb(173, 253, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.skills .image img {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+    top: -107px;
+    left: -6.5px;
+}
+
+.contact {
+    background-color: var(--bg-color);
 }
 
 .contact h2 {
@@ -598,7 +702,7 @@ span {
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 
 .footer .social {
@@ -775,5 +879,22 @@ span {
 
     .services-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills {
+        flex-direction: column;
+        gap: 10rem;
+    }
+    
+    .skills .image {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .skills .image img {
+        width: 100%;
+        top: -206px;
+        left: -0.5px;
+        /* height: 100%; */
     }
 }
