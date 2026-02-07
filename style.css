@@ -776,7 +776,7 @@ span {
 
 @media(max-width:991px) {
     header {
-        padding: 2rem 3%;
+        padding: 1.5rem 3%;
     }
 
     section {
@@ -784,7 +784,7 @@ span {
     }
 
     .timeline-items::before {
-        left: 7px;
+        left: 8px;
     }
 
     .timeline-items:nth-child(odd) {
