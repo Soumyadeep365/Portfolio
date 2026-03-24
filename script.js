@@ -62,7 +62,7 @@ function opentab(tabname, element) {
 
 function downloadFile() {
   const link = document.createElement("a");
-  link.href = "cv.pdf"; // file in same folder
+  link.href = "Soumyadeep_CV.pdf"; // file in same folder
   link.download = "Soumyadeep_CV.pdf"; // downloaded file name
   document.body.appendChild(link);
   link.click();
